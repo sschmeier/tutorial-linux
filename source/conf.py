@@ -65,7 +65,7 @@ master_doc = "index"
 
 # General information about the project.
 project = "%s" % (base_name)
-copyright = "2020, %s" % (base_author)
+copyright = "2020, %s (%s)" % (base_author, base_url)
 author = base_author
 
 # The version info for the project you're documenting, acts as replacement for
