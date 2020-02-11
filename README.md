@@ -1,8 +1,8 @@
-# Sphinx Template / CI
+# A quick Linux tutorial / CI
 
-[![Build Status](https://travis-ci.org/sschmeier/tutorial-linux.svg?branch=master)](https://travis-ci.org/sschmeier/tutorial-linux) 
-
+[![Build Status](https://travis-ci.org/sschmeier/tutorial-linux.svg?branch=master)](https://travis-ci.org/sschmeier/tutorial-linux) [![Netlify Status](https://api.netlify.com/api/v1/badges/7a6f1a38-9466-49b8-9b68-c05172661eb6/deploy-status)](https://app.netlify.com/sites/linuxtutorial/deploys)
 <!-- [![ReadTheDocs](https://readthedocs.org/projects/continuous-sphinx/badge/?version=latest)](https://continuous-sphinx.readthedocs.io/en/latest/?badge=latest) -->
+
 
 An example of continuous integration, using [Travis-CI](https://travis-ci.org/),
 and deployment, using [Netlify](https://www.netlify.com/), of a
