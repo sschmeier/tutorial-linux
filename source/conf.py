@@ -7,7 +7,7 @@
 # values have a default.
 
 # Change these values
-base_name = "Template"  # will be used for titles
+base_name = "LinuxTutorial"  # will be used for titles
 base_author = "Sebastian Schmeier"
 base_url = "https://sschmeier.com"
 
@@ -63,7 +63,7 @@ source_suffix = {
 master_doc = "index"
 
 # General information about the project.
-project = "%s Docs" % (base_name)
+project = "%s" % (base_name)
 copyright = "2020, %s" % (base_author)
 author = base_author
 

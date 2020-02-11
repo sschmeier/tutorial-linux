@@ -1,6 +1,6 @@
 # Sphinx Template / CI
 
-[![Build Status](https://travis-ci.org/sschmeier/continuous-sphinx.svg?branch=master)](https://travis-ci.org/sschmeier/continuous-sphinx) [![PyUp](https://pyup.io/repos/github/sschmeier/continuous-sphinx/shield.svg)](https://pyup.io/repos/github/sschmeier/continuous-sphinx/) 
+[![Build Status](https://travis-ci.org/sschmeier/tutorial-linux.svg?branch=master)](https://travis-ci.org/sschmeier/tutorial-linux) 
 
 <!-- [![ReadTheDocs](https://readthedocs.org/projects/continuous-sphinx/badge/?version=latest)](https://continuous-sphinx.readthedocs.io/en/latest/?badge=latest) -->
 
