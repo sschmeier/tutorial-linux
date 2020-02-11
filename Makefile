@@ -2,10 +2,10 @@
 #
 # Makefile for Sphinx documentation
 #
-PREFIX = SphinxTemplate
+PREFIX = LinuxTutorial
 
 # You can set these variables from the command line.
-SPHINXOPTS    = 
+SPHINXOPTS    = -E
 SPHINXBUILD   = sphinx-build
 PAPER         =
 # changed this to build page in a html dir in one dir up
@@ -25,19 +25,24 @@ help:
 	@echo "  htmlwatch  uses watchdog to make html whenever rst is changed."
 	@echo "  viewtex    open build latexpdf in new window"
 
+# .PHONY: html
+# html:
+# 	sphinx-build -E source build/en/latest
+# 	mv build/en/latest/sitemapindex.xml build
+# 	mv build/en/latest/robots.txt build
+# 	@echo
+# 	@echo "Build finished. The HTML pages are in build."
 
 .PHONY: html
 html:
-	sphinx-build -E source build/en/latest
-	mv build/en/latest/sitemapindex.xml build
-	mv build/en/latest/robots.txt build
+	$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) $(BUILDDIR)/html
 	@echo
-	@echo "Build finished. The HTML pages are in build."
+	@echo "Build finished. The HTML pages are in $(BUILDDIR)/html."
 
 
 .PHONY: view
 view:
-	open $(BUILDDIR)/en/latest/index.html
+	open $(BUILDDIR)/html/index.html
 
 
 .PHONY: htmlwatch
@@ -48,8 +53,8 @@ htmlwatch:
 .PHONY: deploy
 deploy:
 	make latexpdf
-	yes | cp -f build/latex/$(PREFIX).pdf source/_static/
-	git add -u
+	yes | cp -f $(BUILDDIR)/latex/$(PREFIX).pdf source/_static/
+	git add source/_static/$(PREFIX).pdf
 	git commit -m "Updated pdf"
 	bump2version patch
 	git push
@@ -65,4 +70,4 @@ latexpdf:
 
 .PHONY: viewtex
 viewtex:
-	open $(BUILDDIR)/latex/*.pdf
+	open $(BUILDDIR)/latex/$(PREFIX).pdf
