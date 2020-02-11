@@ -32,7 +32,7 @@ sys.path.insert(0, os.path.abspath("."))
 
 # -- General configuration ------------------------------------------------
 
-html_baseurl = "https://"
+html_baseurl = "https://linuxtutorial.netlify.com/"
 
 # Absolute path of conf.py
 conf_abs_path = os.path.abspath(__file__)
